@@ -30,12 +30,16 @@ content_copy
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 14,
-          center: {lat: 42.3726399, lng: -71.1096528}
+          center: {lat: 33.7490, lng: -84.3880}
         });
 
         var bikeLayer = new google.maps.BicyclingLayer();
         bikeLayer.setMap(map);
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+      
       }
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRYXo58mD67l7CO_IMQb4CEw_26IkMUho&callback=initMap">
