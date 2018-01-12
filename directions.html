@@ -5,6 +5,15 @@
   <meta charset="utf-8">
   <title>Travel modes in directions</title>
   <style>
+      header {
+        height: 100px;
+        background-color: green;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+
+      }
       /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
       #map {
@@ -30,26 +39,46 @@
         padding-left: 10px;
       }
     </style>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+ 
+
   </head>
   <body>
-   <!-- <div id="floating-panel">
-      <b>Mode of Travel: </b>
-      <select id="mode">
-        <option value="DRIVING">Driving</option>
-        <option value="WALKING">Walking</option>
-        <option value="BICYCLING">Bicycling</option>
-        <option value="TRANSIT">Transit</option>
-      </select>
-    </div> -->
+    <header>Welcome to E Bikes Atlanta</header>
+    <input type="text" id="search-input"/>
+    <button id="search">Search</button>
+   
     <div id="map"></div>
+    <main>Bike Shop Info</main>
     <script>
-     // alert('hi');
-      function initMap() {
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-        var infoWindow = new google.maps.InfoWindow;
-        var directionsService = new google.maps.DirectionsService;
+
+        var directionsDisplay; 
+        var infoWindow; 
+        var directionsService; 
         var pos;
         var des; 
+
+       
+       /* setTimeout(function(){
+           let pos = {lat: 33.6358, lng:  -84.4123}
+           console.log('hi')
+           let des = {lat: 33.7600, lng:  -84.4300}
+           {
+              location: checkboxArray[i].value,
+              stopover: true
+            }
+             calculateAndDisplayRoute(directionsService, directionsDisplay, pos, des)
+        },10000);*/
+
+
+      function initMap() {
+         directionsDisplay = new google.maps.DirectionsRenderer;
+         infoWindow = new google.maps.InfoWindow;
+         directionsService = new google.maps.DirectionsService;
+        
         //des = {lat: 33.7577, lng:  -84.4008};
         var locations = [ 
            {lat: 33.7577, lng:  -84.4008},
@@ -86,8 +115,7 @@
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
             map.setCenter(pos);
-           // calculateAndDisplayRoute(directionsService, directionsDisplay, pos, des);
-           // newRoute(locations, directionsService, directionsDisplay, pos, des);
+           
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -96,25 +124,22 @@
                 handleLocationError(false, infoWindow, map.getCenter());
               }
         
-
-
-       // calculateAndDisplayRoute(directionsService, directionsDisplay);
-       // document.getElementById('mode').addEventListener('change', function() {
-          
-       // });
-
       }
 
-      function calculateAndDisplayRoute(directionsService, directionsDisplay, pos, des) {
+      function calculateAndDisplayRoute(directionsService, directionsDisplay, pos, des, waypoints) {
         //var selectedMode = document.getElementById('mode').value;
         var selectedMode = "BICYCLING";
-       
+       console.log(pos, des)
         directionsService.route({
           origin: {lat: pos.lat, lng: pos.lng},  // Haight.
           destination: {lat: des.lat, lng: des.lng},  // Ocean Beach.
           // Note that Javascript allows us to access the constant
           // using square brackets and a string value as its
           // "property."
+          waypoints:[{
+              location: 'chicago, il',
+              stopover: true
+            }],
 
           travelMode: google.maps.TravelMode[selectedMode]
         }, function(response, status) {
@@ -157,19 +182,7 @@
           console.log('shortest', shortest, shortestLocation)
            calculateAndDisplayRoute(directionsService, directionsDisplay, pos, shortestLocation)
       }
-      function newRoute(locations, directionsService, directionsDisplay, pos, des) {
-       /* var time = setInterval(function(){
-          console.log('hello')
-          var rand = locations[Math.floor(Math.random() * locations.length)];
-          console.log(rand)
-          calculateAndDisplayRoute(directionsService, directionsDisplay, pos, rand)
-        },1000)*/
-        
-
-       // alert(calcDistance(p1, p2));
-        
-       
-      }
+      
         
       //calculates distance between two points in km's
       function calcDistance(pos, loc) {
