@@ -1,0 +1,54 @@
+header {
+  background-color: #41ca6b;
+  
+  height: 80px;
+
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #1c1c1c;
+  padding: 0;
+  margin: 0;
+}
+
+header h1 {
+  
+  margin-bottom: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+
+
+header p {
+ 
+}
+
+.tradingcard {
+  border: 1px solid #eaecee;
+  margin-bottom: 20px;
+}
+
+.tradingcardimage {
+  width: 100%;
+}
+
+.tradingcardcontent {
+  padding: 20px;
+}
+
+.tradingcardcontent h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tradingcardcontent p {
+  margin: 8px 0;
+}
+ #map {
+        height: 400px;
+      }
+

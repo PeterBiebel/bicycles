@@ -48,7 +48,21 @@ function initMap() {
     map.setCenter(pos);
 
   }, function() {
-    handleLocationError(true, infoWindow, map.getCenter());
+    let p = {lat: 33.7577, lng:  -84.4008}
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: {lat: p.lat, lng: p.lng}
+    });
+    addMarkers(locations, map, p, directionsService, directionsDisplay)
+    directionsDisplay.setMap(map);
+
+
+
+    infoWindow.setPosition(p);
+    infoWindow.setContent('Location found.');
+    infoWindow.open(map);
+    map.setCenter(p);
+    //handleLocationError(true, infoWindow, map.getCenter());
   });
   } else {
           // Browser doesn't support Geolocation
@@ -57,7 +71,7 @@ function initMap() {
 
       }
 
-      function calculateAndDisplayRoute(directionsService, directionsDisplay, pos, des, waypoints) {
+  function calculateAndDisplayRoute(directionsService, directionsDisplay, pos, des, waypoints) {
   //var selectedMode = document.getElementById('mode').value;
   var selectedMode = "BICYCLING";
   console.log(pos, des)

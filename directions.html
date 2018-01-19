@@ -4,28 +4,135 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
   <title>Travel modes in directions</title>
- <link rel="stylesheet" type="text/css" href="directions.css">
-    <script
+  <link rel="stylesheet" type="text/css" href="float-grid.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  
+  <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
- 
 
-  </head>
-  <body>
-    <header>Welcome to E Bike Rental Atlanta</header>
+
+</head>
+<body>
+  <header>
+    <nav role="navigation" class="toolbar">
+      <ul>
+        <li class="menu-item" ss="home">Atlanta Eletric Bike Rentals</li>
+        <li class="menu-item" ss="map">Interactive Map</li>
+        <li class="menu-item" ss="bike-shop">Bike Info</li>
+      </ul>
+    </nav>
+    
+    
+
+  </header>
+
+  <main id="home" role="main">
+   <title> What is Lorem Ipsum?</title>
+<p class="discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+slider
+
+<title> discribe map</title>
+<p class="discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
     <input type="text" id="search-input"/>
     <button id="search">Search</button>
-   
+
     <div id="map"></div>
-    <main>Bike Shop Info</main>
-    <script src = "directions.js">
+
+    <div id="bike-shop">
+      Bike Shop Info
+
+      <title> What is Lorem Ipsum?</title>
+      <p class="discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+      <h2><a href="https://www.industriousoffice.com/locations/atlantabuckhead" target="_blank">Industrious Atlanta</a></h2>
 
 
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRYXo58mD67l7CO_IMQb4CEw_26IkMUho&callback=initMap&libraries=geometry">
-  </script>
+      <div class="row">
+
+        <div class="col-4">
+          <div class="tradingcard">
+            <img class="tradingcardimage" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.6.3_challenge_responsive_layout/rey_square.png" alt="Rey from Star Wars" />
+            <div class="tradingcardcontent">
+              <h2 class="name">Rey</h2>
+              <p>Protagonist, from Tatooine</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="tradingcard">
+            <img class="tradingcardimage" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.6.3_challenge_responsive_layout/finn_square.png" alt="Finn a Strom Trooper in Star Wars"/>
+            <div class="tradingcardcontent">
+              <h2 class="name">Finn</h2>
+              <p>Strom Trooper, befriends Rey</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="tradingcard">
+            <img class="tradingcardimage" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.6.3_challenge_responsive_layout/kylo_square.png" alt="Kylo from Star Wars" />
+            <div class="tradingcardcontent">
+              <h2 class="name">Kylo</h2>
+              <p>Main villain, or is he?</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-4">
+          <div class="tradingcard">
+            <img class="tradingcardimage" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.6.3_challenge_responsive_layout/poe_square.png" alt="Poe from Star Wars" />    
+            <div class="tradingcardcontent">
+              <h2 class="name">Poe</h2>
+              <p>Neutral pilot</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="tradingcard">
+            <img class="tradingcardimage" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.6.3_challenge_responsive_layout/chewbacca_square.png" alt="Chewbacca from Star Wars" />
+            <div class="tradingcardcontent">
+              <h2 class="name">Chewbacca</h2>
+              <p>A great first mate</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="tradingcard">
+            <img class="tradingcardimage" src="https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.6.3_challenge_responsive_layout/yoda_square.png" alt="Yoda Jedi master from Star Wars" />
+            <div class="tradingcardcontent">
+              <h2 class="name">Yoda</h2>
+              <p>Wise old Jedi master</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </main>
   
+
+
+<script src = "directions.js"></script>
+ 
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRYXo58mD67l7CO_IMQb4CEw_26IkMUho&callback=initMap&libraries=geometry">
+</script>
+
+  <script src = "main.js"></script>
 </body>
 </html>
