@@ -9,4 +9,13 @@ $(document).ready(function() {
 	}, 'slow');
 });})
 
-alert("hi")
+$(document).ready(function(){
+  $('.regular').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  });
+});
