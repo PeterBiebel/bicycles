@@ -90,13 +90,15 @@ header h1 {
   margin-top: 0;
   font-size: 20px;
  }
-
+  section.regular {
+    margin-top: 0;
+  }
   .slider {
-    width: 50%;
+    width: 80%;
     margin: 100px auto;
   }
   .slick-slide {
-    margin: 0px 20px;
+    margin: 0px 2px;
   }
   .slick-slide img {
     width: 100%;
@@ -107,14 +109,14 @@ header h1 {
   }
   .slick-slide {
     transition: all ease-in-out .3s;
-    opacity: .2;
+   /* opacity: .2;*/
   }
 
   .slick-active {
-    opacity: .5;
+   /* opacity: .5;*/
   }
   .slick-current {
-    opacity: 1;
+   /* opacity: 1;*/
   }
   header p {
 
