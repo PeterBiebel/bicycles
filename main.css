@@ -121,6 +121,13 @@ header h1 {
   header p {
 
   }
+  #search-input, #search {
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+  }
+  
+  
   .name {
     margin-top: 0;
   } 
