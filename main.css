@@ -121,12 +121,15 @@ header h1 {
   header p {
 
   }
-  #search-input, #search {
-    display: block;
-    margin: 0 auto;
-    height: 20px;
+  #search-input{
+    
+    width: 150px;
+    height: 25px;
   }
-  
+  #submit {
+    height: 25px;
+    text-align: center;
+  }
   
   .name {
     margin-top: 0;
