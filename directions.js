@@ -139,6 +139,7 @@ function calcDistance(pos, loc) {
 $(document).ready(function() {
   $('#search').click(function() {
    let searchTerm = $('#search-input').val()
+   console.log('ser')
    var geocoder =  new google.maps.Geocoder();
     geocoder.geocode( { 'address': searchTerm }, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {

@@ -18,13 +18,21 @@ body {
 }
 main {
 
-  background-color: lightblue;
+  background-color: #595959;
 }
 header h1 {
 
   margin-bottom: 0;
 }
+section {
+  padding: 1em 0;
+  margin: 0 0em 2px 0em;
+  background: white;
 
+}
+.content {
+  padding: 0 1em;
+}
 /*nav ul li {
   display: inline-block;
   }*/
@@ -63,9 +71,13 @@ header h1 {
 
   }
   
+
   .shading:hover {
      text-shadow: 2px 2px red;
 
+  }
+  .shading {
+    text-shadow: 2px 2px black;
   }
  /* .menu-item:hover {
     outline-style: solid;
@@ -79,11 +91,15 @@ header h1 {
   li {
     list-style: none;
   }
+  .price li {
+
+  }
   .discription, .price-list {
     font-family: 'Poppins', sans-serif;
+    color: #777;
   }
  .price {
-    font-size: 30px;
+    font-size: 14px;
     margin-bottom: 0;
  }
  .price-list {
@@ -93,9 +109,16 @@ header h1 {
   section.regular {
     margin-top: 0;
   }
+  .external-links {
+    text-align: center;
+  }
+  .external-links div {
+    display: block;
+    text-transform: lowercase;
+  }
   .slider {
     width: 80%;
-    margin: 100px auto;
+    margin: 50px auto;
   }
   .slick-slide {
     margin: 0px 2px;
@@ -129,11 +152,13 @@ header h1 {
     width: 150px;
     height: 25px;
   }
-  #submit {
+  #search {
     height: 25px;
     text-align: center;
   }
-  
+  .destination {
+  text-align: center;
+  }
   .name {
     margin-top: 0;
   } 
@@ -179,10 +204,8 @@ header h1 {
     background-repeat: no-repeat; 
     background-position: center;
     background-size:contain; */
-}
-.destination {
-  text-align: center;
-}
+
+
 /*Desktop */
   @media only screen and (min-width: 500px) {
     body {
@@ -197,7 +220,12 @@ header h1 {
         margin-left: 5px;
       }
 
+section {
+  padding: 2em 0;
+  margin: 0 2em 4px 2em;
+  background: white;
 
+}
 
 
 
