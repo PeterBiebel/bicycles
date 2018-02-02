@@ -1,44 +1,211 @@
-html 
-AIzaSyCRYXo58mD67l7CO_IMQb4CEw_26IkMUho
-
-content_copy
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Bicycling layer</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: {lat: 42.3726399, lng: -71.1096528}
-        });
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Travel modes in directions</title>
+  <link rel="stylesheet" type="text/css" href="float-grid.css">
+  
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <!-- // Add the new slick-theme.css if you want the default styling -->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+  <title>Electric Bike Atlanta</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <header role="banner">
 
-        var bikeLayer = new google.maps.BicyclingLayer();
-        bikeLayer.setMap(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRYXo58mD67l7CO_IMQb4CEw_26IkMUho&callback=initMap">
-    </script>
-  </body>
+    <nav role="navigation" class="toolbar">
+      <ul>
+
+        <li class="menu-item" ss="home"><span class="shading">Electric Bike Atlanta</span></li>
+        
+        
+        <li class="menu-item" ss="map"><span class="shading">Interactive Map</span></li>
+
+        
+        <li class="menu-item" ss="bike-shop"><span class="shading">Bike Info</span></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section role="segment">
+      <div class="content">
+       <h1 class="name">Electric Bike Atlanta</h1>
+       <p class="discription">Electric Bike Atlanta rents comfortable, fun electric bikes from various co-op work spaces in Altanta listed and marked on the map bleow.  Our electric bikes have a maximum speed of 20 MPH and an average range of 40 miles, and can be used anywhere a normal bike can go.  A saddle storage bag and helmet are included with with rental.  Electric Bike Atlanta is a refreshing way to get to your next meeting or enjoy a day cruising around town. You can drop the bike off at whichever location works best for you.</p>
+     </div>
+   </section>
+   
+
+
+  <section role="segment">
+    <div class="content">
+      <h1>Interactive Map</h1>
+      <p class="discription">The map has two functions. First to let you know where the co-op working spaces are that you rent an electric bike from. Second is to show you a bike route to where you're going and back to the nearest bike rental location</p>
+    </div>
+    <div class="destination">  
+      <input placeholder="Biking Destination" type="text" id="search-input"/><button id="search">SUBMIT</button>
+    </div>
+
+
+    <div id="map"></div>
+  </section>
+  <section role="segment">
+    <div id="bike-shop">
+      <div class="content">
+       <h1>Bike Shop Info</h1>
+
+       <p class="discription">The map has two functions. First to let you know where the co-op working spaces are that you rent an electric bike from. Second is to show you a bike route to where you're going and back to the nearest bike rental location</p>
+     </div>
+     
+   </div>
+
+
+
+
+   <div class="row">
+
+    <div class="col-4">
+      <div class="tradingcard">
+        <img class="tradingcardimage" src="http://www.bikesdirect.com/products/gravity/fat-bikes/fat-bikes-images/bullseye-monster-grn-21.jpg" alt="Green bike with fat tires" />
+        <div class="tradingcardcontent">
+          <h2 class="name">Fat Tire Bike</h2>
+          <p>Single Speed Bike</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="tradingcard">
+        <img class="tradingcardimage" src="catalyst.jpg" alt="Smartmotion Catalyst"/>
+        <div class="tradingcardcontent">
+          <h2 class="name">Smartmotion Catalyst</h2>
+          <p>Electric Mountain Bike</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="tradingcard">
+        <img class="tradingcardimage" src="pacer.jpg" alt="Kylo from Star Wars" />
+        <div class="tradingcardcontent">
+          <h2 class="name">Smartmotion Pacer</h2>
+          <p>Electric City Bike</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-4">
+      <div class="tradingcard">
+        <img class="tradingcardimage" src="catalyst2.jpg" alt="Poe from Star Wars" />    
+        <div class="tradingcardcontent">
+          <h2 class="name">Smartmotion Catalyst</h2>
+          <p>Electric Mountain Bike</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="tradingcard">
+        <img class="tradingcardimage" src="Product_Still_main_preview.jpg" alt="Chewbacca from Star Wars" />
+        <div class="tradingcardcontent">
+          <h2 class="name">Surface604</h2>
+          <p>A great first mate</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="tradingcard">
+        <img class="tradingcardimage" src="catalyst.jpg" alt="Yoda Jedi master from Star Wars" />
+        <div class="tradingcardcontent">
+          <h2 class="name"></h2>
+          <p>Wise old Jedi master</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+</section>
+<section role="segment">
+    <div class="content">
+      <h1 class="name">Prices</h1>
+      
+        <ul class="price-list">
+          <li>$25 HOUR</li>
+          <li>$100 DAILY</li>
+          <li>$300 WEEKLY</li>
+          <li>$450 MONTHLY</li>
+        </ul>
+      
+    </div>
+    <div class="regular slider">
+      <div>
+        <img src="DSC_2896.jpeg">
+      </div>
+      <div>
+        <img src="DSC_2917.jpeg">
+      </div>
+      <div>
+        <img src="DSC_2914.jpeg">
+      </div>
+      <div>
+        <img src="DSC_2924.jpeg">
+      </div>
+      <div>
+        <img src="DSC_2928.jpeg">
+      </div>
+      <div>
+        <img src="DSC_2931.jpeg">
+      </div> 
+
+    </div>
+    <div class="external-links">
+  <div>
+ <a href="https://www.strongboxwest.com" target="_blank">STRONGBOX WEST</a>
+
+ <a href="https://www.industriousoffice.com/locations/atlantastockyards" target="_blank">Industrious Atlanta West Midtown</a>
+
+</div>
+<div>
+ <a href="https://www.industriousoffice.com/locations/atlantabuckhead" target="_blank">Industrious Atlanta Buckhead</a>
+
+
+ <a href="https://www.industriousoffice.com/locations/atlantamidtown" target="_blank">Industrious Atlanta Midtown</a>
+ </div>
+ <div>
+ <a href="http://www.decaturcoworks.com/en" target="_blank">DECATUR COWORKS</a>
+ <a href="https://www.industriousoffice.com/locations/atlantaponce" target="_blank">Industrious Atlanta Ponce City</a>
+</div>
+</div>
+  </section>
+</main>
+
+
+
+<script src = "directions.js"></script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRYXo58mD67l7CO_IMQb4CEw_26IkMUho&callback=initMap&libraries=geometry">
+</script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src = "main.js"></script>
+</body>
 </html>
