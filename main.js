@@ -19,3 +19,20 @@ $(document).ready(function(){
   autoplaySpeed: 5000,
   });
 });
+//cal which is the largest image in each row 
+//next for each image cal the diff in height
+//add the diff in margin to the bottom 
+//var first = $('.tradingcardimage').eq(0).height()
+//var second = $('.tradingcardimage').eq(1).height()
+//var third = $('.tradingcardimage').eq(2).height()
+
+//$('.tradingcardimage').first().css('margin-bottom', (second - first) + 'px')
+//$('.tradingcardimage').eq(2).css('margin-bottom', (second - third) + 'px')
+
+
+//tradingcardimage set as var 
+// jquery docs .resize()
+
+//$( window ).resize(function() {
+ // $( '.tradingcardimage' );
+//});

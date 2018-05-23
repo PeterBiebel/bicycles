@@ -76,6 +76,8 @@ function initMap() {
   //var selectedMode = document.getElementById('mode').value;
   var selectedMode = "BICYCLING";
   console.log(pos, des)
+  getWeather(des)
+
   directionsService.route({
     origin: {lat: pos.lat, lng: pos.lng},  // Haight.
     destination: {lat: des.lat, lng: des.lng},  // Ocean Beach.
@@ -176,3 +178,16 @@ $(document).ready(function() {
    })
    
 });
+//29ccc226f107647381e35ad05d7216d5
+
+function getWeather(des) {
+
+   let url= `https://api.openweathermap.org/data/2.5/weather?lat=${des.lat}&lon=${des.lng}&APPID=29ccc226f107647381e35ad05d7216d5`
+   $.get(url, function(data, status){
+    console.log(data)
+   })
+
+}
+
+
+
